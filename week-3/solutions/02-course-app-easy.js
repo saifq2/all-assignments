@@ -9,6 +9,8 @@ let COURSES = [];
 
 const adminAuthentication = (req, res, next) => {
   const { username, password } = req.headers;
+  // const username=req.headers.username;
+  // const password=req.headers.password;
 
   const admin = ADMINS.find(a => a.username === username && a.password === password);
   if (admin) {
